@@ -100,7 +100,8 @@ var items = [
         ["intro_sep", "Separator", {
             hideProgressBar: false,
             transfer: "keypress",
-            normalMessage: "Şimdi deneye alışmak için iki adet alıştırma göreceksiniz. Alıştırmalarda doğru yanlış cevabınızla ilgili geridönüt vereceğiz. Fakat deneyin kendisinde böyle bir geridönüt olmayacaktır."
+            normalMessage: "Şimdi deneye alışmak için iki adet alıştırma göreceksiniz. Alıştırmalarda doğru yanlış cevabınızla ilgili geridönüt vereceğiz. Fakat deneyin kendisinde böyle bir geridönüt olmayacaktır.",
+            errorMessage: "Şimdi deneye alışmak için iki adet alıştırma göreceksiniz. Alıştırmalarda doğru yanlış cevabınızla ilgili geridönüt vereceğiz. Fakat deneyin kendisinde böyle bir geridönüt olmayacaktır."
         }],
 
         ["within_intro_sep", "Separator", {
@@ -113,7 +114,8 @@ var items = [
         ["practice_sep", "Separator", {
             hideProgressBar: false,
             transfer: "keypress",
-            normalMessage: "Alıştırma kısmını tamamladınız. Deneye başlamak için boşluk tuşuna basınız."
+            normalMessage: "Alıştırma kısmını tamamladınız. Deneye başlamak için boşluk tuşuna basınız.",
+            errorMessage: "Alıştırma kısmını tamamladınız. Deneye başlamak için boşluk tuşuna basınız."
         }],
 
         ["intro", "Form", {
