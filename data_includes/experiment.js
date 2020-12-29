@@ -100,8 +100,7 @@ var items = [
         ["intro_sep", "Separator", {
             hideProgressBar: false,
             transfer: "keypress",
-            normalMessage: "Alıştırma kısmına başlamak için boşluk tuşuna basınız.",
-            errorMessage: "Alıştırma kısmına başlamak için boşluk tuşuna basınız."
+            normalMessage: "Şimdi deneye alışmak için iki adet alıştırma göreceksiniz. Alıştırmalarda doğru yanlış cevabınızla ilgili geridönüt vereceğiz. Fakat deneyin kendisinde böyle bir geridönüt olmayacaktır."
         }],
 
         ["within_intro_sep", "Separator", {
@@ -114,8 +113,7 @@ var items = [
         ["practice_sep", "Separator", {
             hideProgressBar: false,
             transfer: "keypress",
-            normalMessage: "Deneye başlamak için boşluk tuşuna basınız.",
-            errorMessage: "Lütfen cevap verirken biraz daha dikkatli olalım."
+            normalMessage: "Alıştırma kısmını tamamladınız. Deneye başlamak için boşluk tuşuna basınız."
         }],
 
         ["intro", "Form", {
@@ -149,7 +147,7 @@ var items = [
         }],
 
         ["debrief", "mymessage", {
-            html: ["div", "p",
+            html: ["div",
                 "Deney sona erdi. Yanıtlarınız otomatik olarak kaydedildi. Katılımınız için çok teşekkür ederiz!"],
             transfer: 3000
         }],
@@ -171,8 +169,8 @@ var items = [
             consentRequired: false,
             transfer: "keypress",
             html: ["div",
-                ["p", "NOT: Vereceğiniz cevapları olabildiğince hızlı ve doğru vermeye çalışın. Deney boyunca deneye odaklanmanız gerekmektedir."],
-                ["p", "Katılımınız için çok teşekkürler!"],
+                ["p", "Vereceğiniz cevapları olabildiğince hızlı ve doğru vermeye çalışın. Deney boyunca deneye odaklanmanız gerekmektedir."],
+                ["p", "Katılımınız için şimdiden çok teşekkürler!"],
             ]
         }],
 
