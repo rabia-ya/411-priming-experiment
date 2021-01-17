@@ -4,13 +4,13 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 #packages
 library(magrittr)
 library(janitor)
-library(googledrive)
+#library(googledrive)
 library(readxl)
 library(tidyr)
 library(tidyverse)
 
 #read file
-drive_download("Priming", type = "xlsx", overwrite = T)
+#drive_download("Priming", type = "xlsx", overwrite = T)
 stimFile <- "Priming.xlsx"
 experimental <- read_excel(stimFile, sheet = 3)
 filler <- read_excel(stimFile, sheet = 4)
