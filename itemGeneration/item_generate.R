@@ -10,7 +10,7 @@ library(tidyr)
 library(tidyverse)
 
 #read file
-drive_download("Priming", type = "xlsx")
+drive_download("Priming", type = "xlsx", overwrite = T)
 stimFile <- "Priming.xlsx"
 experimental <- read_excel(stimFile, sheet = 1)
 filler <- read_excel(stimFile, sheet = 2)
@@ -68,7 +68,12 @@ stim_exp_string <- paste(stim_exp$ibex, collapse = ",\n")
 stim_fill_string <- paste(stim_fill$ibex, collapse = ",\n")
 #stim_fill_string %<>% utf8::utf8_encode()
 
+# create a link for the file
 exp_js_file <- "../data_includes/experiment.js"
+# remove the existing file.
+if (file.exists(exp_js_file)) {file.remove(exp_js_file)}
+
+# put everything together
 file.copy("stimuli_template_top", exp_js_file)
 cat(stim_exp_string, file = exp_js_file, append = T )
 cat(", \n", file = exp_js_file, append = T)
