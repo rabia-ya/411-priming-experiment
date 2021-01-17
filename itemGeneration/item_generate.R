@@ -12,8 +12,8 @@ library(tidyverse)
 #read file
 drive_download("Priming", type = "xlsx", overwrite = T)
 stimFile <- "Priming.xlsx"
-experimental <- read_excel(stimFile, sheet = 1)
-filler <- read_excel(stimFile, sheet = 2)
+experimental <- read_excel(stimFile, sheet = 3)
+filler <- read_excel(stimFile, sheet = 4)
 
 #clean
 experimental %<>% select(1:4) 
