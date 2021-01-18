@@ -155,17 +155,17 @@ var items = [
         }],
 
         ["practice","mymessage", {html: "+"},
-        "mymessage", {html: "göz"},
+        "mymessage", {html: "yalnız"},
         "mymessage", {html: "+"}, 
-        "mymessage", {html: "bina"},
+        "mymessage", {html: "sapan"},
         "mymessage", {html: "+"}, 
-        "myquestion", {hasCorrect:1, q: "",as: [["f","HAYIR"], ["j","EVET"]] }],
+        "myquestion", {hasCorrect:1, q: "",as: [["f","HAYIR (f)"], ["j","EVET (j)"]] }],
         ["practice","mymessage", {html: "+"},
         "mymessage", {html: "ağır"},
         "mymessage", {html: "+"}, 
         "mymessage", {html: "übtey"},
         "mymessage", {html: "+"}, 
-        "myquestion", {hasCorrect: 0, q: "",as: [["f","HAYIR"], ["j","EVET"]] }],
+        "myquestion", {hasCorrect: 0, q: "",as: [["f","HAYIR (f)"], ["j","EVET (j)"]] }],
 
         ["practice", Message, {
             consentRequired: false,

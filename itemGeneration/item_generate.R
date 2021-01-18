@@ -58,7 +58,7 @@ stim_fill <- filler %>% select(item, filler)
 stim_fill %<>% gather(condition, sentence, filler)
 stim_fill %<>% arrange(item,condition)
 stim_fill$ibex <- with(stim_fill, sprintf(
-  '[["%s", %d],"mymessage", {html: "+"}, "mymessage", {html: %s}, "mymessage", {html: "+"}, "myquestion", {q: "",as: [["f","HAYIR"], ["j","EVET"]] }]', condition, item, sentence
+  '[["%s", %d],"mymessage", {html: "+"}, "mymessage", {html: %s}, "mymessage", {html: "+"}, "myquestion", {q: "",as: [["f","HAYIR (f)"], ["j","EVET (j)"]] }]', condition, item, sentence
 ))
 
 # as a string
