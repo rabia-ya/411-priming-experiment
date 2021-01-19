@@ -7,7 +7,8 @@ body {
     margin-top: 5em;
 }
 .myquestiontx-question-text {
-  font-size:32px; 
+  font-size:32px;
+  margin-top: -10em; 
 }
 
 
