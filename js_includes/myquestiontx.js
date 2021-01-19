@@ -169,7 +169,7 @@
                 var t = this;
                 this.utils.setTimeout(function () {
                     var answerTime = new Date().getTime();
-                    t.setFlag(false);
+                    //t.setFlag(false);
                     this.utils.setValueForNextElement("slow", true); 
                     t.finishedCallback([[[questionField, t.question ? csv_url_encode(t.question) : "NULL"],
                                          [answerField, "NULL"], [correctField, "NULL"],
