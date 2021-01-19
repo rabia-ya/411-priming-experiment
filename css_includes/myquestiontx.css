@@ -1,19 +1,18 @@
 cs.Question {
     margin-left: 0;
     padding-left: 0;
-    font-size: 32px; 
+    font-size: 1.5em; 
 }
 .instructions-text {
     font-style: italic;
     clear: left;
     padding-top: 1em;
-    font-size: 32px;
+    font-size: small;
 }
 li.normal-answer {
     text-align: left;
     cursor: pointer;
     padding-bottom: 1em;
-    font-size: 32px;
 }
 li:hover.normal-answer {
     cursor: pointer;
@@ -26,7 +25,7 @@ li.scale-box {
     margin-right: 1em;
     padding-right: 0;
     border: 0px #9ea4b1 solid;   // makes the border around the boxes thicker
-    font-size: 1em;            // font-size within the boxes
+    font-size: 0.9em;            // font-size within the boxes
     width: 5em;                  // width of the boxes larger (default is 1)
     height: 1em;
     padding-top: 2em;
@@ -48,7 +47,6 @@ li.scale-box a {
     text-decoration: none; 
     display: block;
     vertical-align: middle;
-    font-size: 32px;
 }
 li.scale-box a:hover {
     text-decoration: none;
@@ -57,7 +55,7 @@ li.scale-box a:hover {
 }
 span.fake-link {
     color: black;
-    font-size: 15px;
+    font-size: 10px;
     cursor: pointer;
 }
 span:hover.fake-link {
