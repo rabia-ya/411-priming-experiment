@@ -11,6 +11,16 @@ body {
   margin-top: 5em; 
 }
 .Separatortx-next-item-slow-message {
+  font-size:32px;
+  margin-top: 5em; 
   color: red;
 }
-
+.Separatortx-next-item-failure-message {
+  font-size:32px;
+  margin-top: 5em; 
+  color: red;
+}
+.Separatortx-next-item-message {
+  font-size:32px;
+  margin-top: 5em; 
+}
