@@ -16,7 +16,6 @@ jqueryWidget: {
         if (x) this.style = x;
         //assert(this.style == "normal" || this.style == "error", "'style' property of Separator must either be 'normal' or 'error'");
         assert(this.style == "normal" || this.style == "error" || this.style == "slow", "'style' property of Separator must be 'normal', 'error', or 'slow' ");
-
         this.transfer = dget(this.options, "transfer", "keypress");
         assert(this.transfer == "keypress" || typeof(this.transfer) == "number",
                "Value of 'transfer' option of Separator must either be the string 'keypress' or a number");

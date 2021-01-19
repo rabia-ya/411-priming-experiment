@@ -28,19 +28,19 @@ names(filler)[3] <- "prime"
 # prepare conditions
 experimental$condition_related <-
   with(experimental, sprintf(
-    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: %s"', 
+    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: "%s"', 
     prime_related, target
   ))
 
 experimental$condition_unrelated <-
   with(experimental, sprintf(
-    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: %s"', 
+    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: "%s"', 
     prime_unrelated, target
   ))
 
 filler$filler <-
   with(filler, sprintf(
-    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: %s"', 
+    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: "%s"', 
     prime, target
   ))
 

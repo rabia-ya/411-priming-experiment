@@ -18,6 +18,14 @@ var showProgressBar = false;
 
 var defaults = [
 
+    "Separatortx", {
+        showProgressBar: false,
+        transfer: 1000,
+        normalMessage: "Correct! Wonderful!",
+        errorMessage: "Opps! Incorrect, please try again."
+        slowMessage: "Too Slow!"
+    },
+
     "Separator", {
         showProgressBar: false,
         transfer: 1000,
@@ -29,6 +37,13 @@ var defaults = [
         mode: "self-paced reading"
     },
     "myquestiontx", {
+        hideProgressBar: true,
+        randomOrder: false,
+        presentHorizontally: true,
+        hasCorrect: false,
+        timeout: 2500
+    },
+    "myquestion", {
         hideProgressBar: true,
         randomOrder: false,
         presentHorizontally: true,
@@ -166,18 +181,8 @@ var items = [
             transfer: 3000
         }],
 
-        ["practice","mymessage", {html: "+"},
-        "mymessage", {html: "yalnız"},
-        "mymessage", {html: "+"}, 
-        "mymessage", {html: "sapan"},
-        "mymessage", {html: "+"}, 
-        "myquestion", {hasCorrect:1, q: "",as: [["f","HAYIR (f)"], ["j","EVET (j)"]] }],
-        ["practice","mymessage", {html: "+"},
-        "mymessage", {html: "ağır"},
-        "mymessage", {html: "+"}, 
-        "mymessage", {html: "übtey"},
-        "mymessage", {html: "+"}, 
-        "myquestion", {hasCorrect: 0, q: "",as: [["f","HAYIR (f)"], ["j","EVET (j)"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "monitör"}, "myblank", {html: ""}, "myquestiontx", {q: "bilgisayar" ,as: [["f","HAYIR"], ["j","EVET"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "monitör"}, "myblank", {html: ""}, "myquestiontx", {q: "bilgisayar" ,as: [["f","HAYIR"], ["j","EVET"]] }],
 
         ["practice", Message, {
             consentRequired: false,
