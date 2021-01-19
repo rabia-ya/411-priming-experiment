@@ -28,7 +28,7 @@ var defaults = [
     "DashedSentence", {
         mode: "self-paced reading"
     },
-    "myquestion", {
+    "myquestiontx", {
         hideProgressBar: true,
         randomOrder: false,
         presentHorizontally: true,
@@ -49,7 +49,17 @@ var defaults = [
     "mymessage", {
         hideProgressBar: true,
         centerItems: true,
-        transfer: 1000
+        transfer: 300
+    },
+    "mycross", {
+        hideProgressBar: true,
+        centerItems: true,
+        transfer: 200
+    },
+    "myblank", {
+        hideProgressBar: true,
+        centerItems: true,
+        transfer: 150
     },
     "Form", {
         hideProgressBar: true,
@@ -90,11 +100,12 @@ function modifyRunningOrder(ro) {
 var items = [
         ["send_results", "__SendResults__", {}],
 
-        ["sep", "Separator", {
+        ["sep", "Separatortx", {
             hideProgressBar: false,
             transfer: "keypress",
             normalMessage: "Bir sonraki kelime setine geçmek için boşluk tuşuna basınız.",
-            errorMessage: "Bir sonraki kelime setine geçmek için boşluk tuşuna basınız."
+            errorMessage: "Bir sonraki kelime setine geçmek için boşluk tuşuna basınız.",
+            slowMessage: "Çok yavaşsın! Biraz daha hızlı cevaplar ver!"
         }],
 
         ["intro_sep", "Separator", {
@@ -104,11 +115,12 @@ var items = [
             errorMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız. Bu kısımda size cevaplarınızın doğruluğuna göre geridönüt verilecektir."
         }],
 
-        ["within_intro_sep", "Separator", {
+        ["within_intro_sep", "Separatortx", {
             hideProgressBar: false,
             transfer: "keypress",
             normalMessage: "Bir sonraki kelime setine geçmek için boşluk tuşuna basınız.",
-            errorMessage: "Lütfen cevap verirken biraz daha dikkatli olalım."
+            errorMessage: "Lütfen cevap verirken biraz daha dikkatli olalım.",
+            slowMessage: "Çok yavaşsın! Biraz daha hızlı cevaplar ver!"
         }],
 
         ["practice_sep", "Separator", {

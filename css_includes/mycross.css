@@ -1,0 +1,12 @@
+.message {
+    color: black;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 32px;
+    background-color: white;
+    margin-left: 0;
+    margin-top: 5em;
+}
+
+.continue-link { text-decoration: none; color: blue; }
+.continue-link:hover { text-decoration: underline; color: blue; }
+.continue-link:visited { color: blue; }

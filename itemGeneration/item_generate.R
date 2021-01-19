@@ -24,22 +24,23 @@ filler %<>% select(1:3)
 names(filler)[2] <- "target"
 names(filler)[3] <- "prime"
 
+
 # prepare conditions
 experimental$condition_related <-
   with(experimental, sprintf(
-    '"%s"}, "mymessage", {html: "+"}, "mymessage", {html: "%s"', 
+    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: %s"', 
     prime_related, target
   ))
 
 experimental$condition_unrelated <-
   with(experimental, sprintf(
-    '"%s"}, "mymessage", {html: "+"}, "mymessage", {html: "%s"', 
+    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: %s"', 
     prime_unrelated, target
   ))
 
 filler$filler <-
   with(filler, sprintf(
-    '"%s"}, "mymessage", {html: "+"}, "mymessage", {html: "%s"', 
+    '"%s"}, "myblank", {html: ""}, "myquestiontx", {q: %s"', 
     prime, target
   ))
 
@@ -49,7 +50,7 @@ stim_exp <- experimental %>% select(item, condition_related, condition_unrelated
 stim_exp %<>% gather(condition, sentence, condition_related:condition_unrelated)
 stim_exp %<>% arrange(item,condition)
 stim_exp$ibex <- with(stim_exp, sprintf(
-  '[["%s", %d],"mymessage", {html: "+"}, "mymessage", {html: %s}, "mymessage", {html: "+"}, "myquestion", {q: "",as: [["f","HAYIR"], ["j","EVET"]] }]', condition, item, sentence
+  '[["%s", %d], "mycross", {html: "+"}, "mymessage", {html: %s ,as: [["f","HAYIR"], ["j","EVET"]] }]', condition, item, sentence
 ))
 
 ## fillers
@@ -58,7 +59,7 @@ stim_fill <- filler %>% select(item, filler)
 stim_fill %<>% gather(condition, sentence, filler)
 stim_fill %<>% arrange(item,condition)
 stim_fill$ibex <- with(stim_fill, sprintf(
-  '[["%s", %d],"mymessage", {html: "+"}, "mymessage", {html: %s}, "mymessage", {html: "+"}, "myquestion", {q: "",as: [["f","HAYIR (f)"], ["j","EVET (j)"]] }]', condition, item, sentence
+  '[["%s", %d], "mycross", {html: "+"}, "mymessage", {html: %s ,as: [["f","HAYIR"], ["j","EVET"]] }]', condition, item, sentence
 ))
 
 # as a string
