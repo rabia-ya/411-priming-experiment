@@ -126,8 +126,8 @@ var items = [
         ["intro_sep", "Separator", {
             hideProgressBar: false,
             transfer: "keypress",
-            normalMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız. Bu kısımda size cevaplarınızın doğruluğuna göre geridönüt verilecektir.",
-            errorMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız. Bu kısımda size cevaplarınızın doğruluğuna göre geridönüt verilecektir."
+            normalMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız. Bu kısımda size cevaplarınızın doğruluğuna göre geridönüt verilecektir. Ek olarak 2.5 saniye içerisinde cevaplamazsanız hızınız hakkında da geri dönüt alacaksınız.",
+            errorMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız. Bu kısımda size cevaplarınızın doğruluğuna göre geridönüt verilecektir. Ek olarak 2.5 saniye içerisinde cevaplamazsanız hızınız hakkında da geri dönüt alacaksınız."
         }],
 
         ["within_intro_sep", "Separatortx", {
@@ -176,27 +176,26 @@ var items = [
         }],
 
         ["debrief", "mymessage", {
-            html: ["div",
-                "Deney sona erdi. Yanıtlarınız otomatik olarak kaydedildi. Katılımınız için çok teşekkür ederiz!"],
+            html: { include: "debrief.html" },
             transfer: 3000
         }],
 
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "şurup"}, "myblank", {html: ""}, "myquestiontx", {q: "turnuva" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "kılıf"}, "myblank", {html: ""}, "myquestiontx", {q: "übtey" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "burç"}, "myblank", {html: ""}, "myquestiontx", {q: "fıskiye" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "sistem"}, "myblank", {html: ""}, "myquestiontx", {q: "uvnar" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "yığın"}, "myblank", {html: ""}, "myquestiontx", {q: "battaniye" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "söz"}, "myblank", {html: ""}, "myquestiontx", {q: "afbaç" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "bağlantı"}, "myblank", {html: ""}, "myquestiontx", {q: "iplik" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "nakış"}, "myblank", {html: ""}, "myquestiontx", {q: "örgü" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "madalya"}, "myblank", {html: ""}, "myquestiontx", {q: "asker" ,as: [["f","H"], ["j","E"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "kilo"}, "myblank", {html: ""}, "myquestiontx", {q: "mum" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "şurup"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 1, q: "turnuva" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "kılıf"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 0, q: "übtey" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "burç"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 1, q: "fıskiye" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "sistem"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 0, q: "uvnar" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "yığın"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 1, q: "battaniye" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "söz"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 0, q: "afbaç" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "bağlantı"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 1, q: "iplik" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "nakış"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 1, q: "örgü" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "madalya"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 1, q: "asker" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "kilo"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 0, q: "movay" ,as: [["f","H"], ["j","E"]] }],
         
         ["practice", Message, {
             consentRequired: false,
             transfer: "keypress",
             html: ["div",
-                ["p", "Deney esnasında vereceğiniz cevapları olabildiğince hızlı ve doğru vermeye çalışın. Deney boyunca deneye odaklanmanız gerekmektedir. Alıştırmaların aksine, deneyin kendisinde size geridönüt verilmeyecektir."],
+                ["p", "Deney esnasında vereceğiniz cevapları olabildiğince hızlı ve doğru vermeye çalışın. Deney boyunca deneye odaklanmanız gerekmektedir. Alıştırmaların aksine, deneyin kendisinde cevabınızın doğruluğu ile ilgili geridönüt verilmeyecektir. Fakat geç cevap vermeniz taktirde geridönüt verilecektir."],
                 ["p", "Katılımınız için şimdiden çok teşekkürler!"],
             ]
         }],

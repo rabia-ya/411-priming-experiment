@@ -81,3 +81,4 @@ cat(", \n", file = exp_js_file, append = T)
 cat(stim_fill_string, file = exp_js_file, append = T )
 cat(readLines("stimuli_template_bottom", encoding = "utf-8"), 
     file = exp_js_file, append = T)
+
