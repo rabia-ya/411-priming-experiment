@@ -10,7 +10,7 @@
     var __Questions_answers__ = null;
     
     define_ibex_controller({
-    name: "myquestion",
+    name: "myquestiontx",
     
     jqueryWidget: {
         _init: function () {
