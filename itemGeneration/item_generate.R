@@ -50,7 +50,7 @@ stim_exp <- experimental %>% select(item, condition_related, condition_unrelated
 stim_exp %<>% gather(condition, sentence, condition_related:condition_unrelated)
 stim_exp %<>% arrange(item,condition)
 stim_exp$ibex <- with(stim_exp, sprintf(
-  '[["%s", %d], "mycross", {html: "+"}, "mymessage", {html: %s ,as: [["f","HAYIR"], ["j","EVET"]] }]', condition, item, sentence
+  '[["%s", %d], "mycross", {html: "+"}, "mymessage", {html: %s ,as: [["f","H"], ["j","E"]] }]', condition, item, sentence
 ))
 
 ## fillers
@@ -59,7 +59,7 @@ stim_fill <- filler %>% select(item, filler)
 stim_fill %<>% gather(condition, sentence, filler)
 stim_fill %<>% arrange(item,condition)
 stim_fill$ibex <- with(stim_fill, sprintf(
-  '[["%s", %d], "mycross", {html: "+"}, "mymessage", {html: %s ,as: [["f","HAYIR"], ["j","EVET"]] }]', condition, item, sentence
+  '[["%s", %d], "mycross", {html: "+"}, "mymessage", {html: %s ,as: [["f","H"], ["j","E"]] }]', condition, item, sentence
 ))
 
 # as a string

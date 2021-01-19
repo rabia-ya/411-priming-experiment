@@ -181,9 +181,17 @@ var items = [
             transfer: 3000
         }],
 
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "monitör"}, "myblank", {html: ""}, "myquestiontx", {q: "bilgisayar" ,as: [["f","HAYIR"], ["j","EVET"]] }],
-        ["practice","mycross", {html: "+"}, "mymessage", {html: "monitör"}, "myblank", {html: ""}, "myquestiontx", {q: "bilgisayar" ,as: [["f","HAYIR"], ["j","EVET"]] }],
-
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "şurup"}, "myblank", {html: ""}, "myquestiontx", {q: "turnuva" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "kılıf"}, "myblank", {html: ""}, "myquestiontx", {q: "übtey" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "burç"}, "myblank", {html: ""}, "myquestiontx", {q: "fıskiye" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "sistem"}, "myblank", {html: ""}, "myquestiontx", {q: "uvnar" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "yığın"}, "myblank", {html: ""}, "myquestiontx", {q: "battaniye" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "söz"}, "myblank", {html: ""}, "myquestiontx", {q: "afbaç" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "bağlantı"}, "myblank", {html: ""}, "myquestiontx", {q: "iplik" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "nakış"}, "myblank", {html: ""}, "myquestiontx", {q: "örgü" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "madalya"}, "myblank", {html: ""}, "myquestiontx", {q: "asker" ,as: [["f","H"], ["j","E"]] }],
+        ["practice","mycross", {html: "+"}, "mymessage", {html: "kilo"}, "myblank", {html: ""}, "myquestiontx", {q: "mum" ,as: [["f","H"], ["j","E"]] }],
+        
         ["practice", Message, {
             consentRequired: false,
             transfer: "keypress",

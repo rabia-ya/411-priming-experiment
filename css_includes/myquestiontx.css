@@ -25,7 +25,7 @@ li.scale-box {
     margin-right: 1em;
     padding-right: 0;
     border: 0px #9ea4b1 solid;   // makes the border around the boxes thicker
-    font-size: 0.9em;            // font-size within the boxes
+    font-size: 1em;             // font-size within the boxes
     width: 5em;                  // width of the boxes larger (default is 1)
     height: 1em;
     padding-top: 2em;
@@ -55,7 +55,7 @@ li.scale-box a:hover {
 }
 span.fake-link {
     color: black;
-    font-size: 10px;
+    font-size: 15px;
     cursor: pointer;
 }
 span:hover.fake-link {
