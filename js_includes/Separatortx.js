@@ -24,6 +24,10 @@ jqueryWidget: {
         var normal_message = dget(this.options, "normalMessage", "Press any key to continue.");
         var x = this.utils.getValueFromPreviousElement("normalMessage");
         if (x) normal_message = x;
+        
+        var slow_message = dget(this.options, "slowMessage", "Too slow!");
+        var x = this.utils.getValueFromPreviousElement("slowMessage");
+        if (x) slow_message = x;
 
         var error_message = dget(this.options, "errorMessage", "Wrong. Press any key to continue.");
         var x = this.utils.getValueFromPreviousElement("errorMessage");
@@ -34,6 +38,10 @@ jqueryWidget: {
         if (this.style == "error") {
             this.element.addClass(this.cssPrefix + "next-item-failure-message");
             p.text(error_message);
+        }
+        else if (this.style == "slow") {
+            this.element.addClass(this.cssPrefix + "next-item-slow-message");
+            p.text(slow_message);
         }
         else {
             this.element.addClass(this.cssPrefix + "next-item-message");
