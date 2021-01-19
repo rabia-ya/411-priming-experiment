@@ -7,12 +7,13 @@ cs.Question {
     font-style: italic;
     clear: left;
     padding-top: 1em;
-    font-size: small;
+    font-size: 32px;
 }
 li.normal-answer {
     text-align: left;
     cursor: pointer;
     padding-bottom: 1em;
+    font-size: 32px;
 }
 li:hover.normal-answer {
     cursor: pointer;
@@ -47,6 +48,7 @@ li.scale-box a {
     text-decoration: none; 
     display: block;
     vertical-align: middle;
+    font-size: 32px;
 }
 li.scale-box a:hover {
     text-decoration: none;
