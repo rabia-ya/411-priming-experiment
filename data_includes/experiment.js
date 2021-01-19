@@ -97,13 +97,13 @@ var defaults = [
 function modifyRunningOrder(ro) {
     for (var i = 0; i < ro.length; ++i) {
         if ((i != 0) && (i % 40 == 0)) {
-            // Passing 'true' as the third argument casues the results from this controller to be omitted from the results file. 
+            // Passing 'true' as the third argument casues the results from this controller to be omitted from the results file.
             // (Though in fact, the Message controller does not add any results in any case.)
             ro[i].push(new DynamicElement(
                 "Message", {
                     html: "<p>Kısa bir ara. Bir sonraki cümleye geçmek için boşluk tuşuna basınız.</p>",
                     transfer: "keypress"
-                }, //, transfer: 1000 
+                }, //, transfer: 1000
                 true
             ));
         }
@@ -126,8 +126,8 @@ var items = [
         ["intro_sep", "Separator", {
             hideProgressBar: false,
             transfer: "keypress",
-            normalMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız. Bu kısımda size cevaplarınızın doğruluğuna göre geridönüt verilecektir. Ek olarak 2.5 saniye içerisinde cevaplamazsanız hızınız hakkında da geri dönüt alacaksınız.",
-            errorMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız. Bu kısımda size cevaplarınızın doğruluğuna göre geridönüt verilecektir. Ek olarak 2.5 saniye içerisinde cevaplamazsanız hızınız hakkında da geri dönüt alacaksınız."
+            normalMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız.",
+            errorMessage: "Deneyden önceki alıştırma kısmına başlamak için boşluk tuşuna basınız."
         }],
 
         ["within_intro_sep", "Separatortx", {
@@ -179,7 +179,14 @@ var items = [
             html: { include: "debrief.html" },
             transfer: 3000
         }],
-
+    
+        ["practice", Message, {
+            consentRequired: false,
+            transfer: "keypress",
+            html: ["div",
+                ["p", "Bu kısımda size cevaplarınızın doğruluğuna göre geridönüt verilecektir. Ek olarak 2.5 saniye içerisinde cevaplamazsanız hızınız hakkında da geri dönüt alacaksınız."],
+            ]
+        }],
         ["practice","mycross", {html: "+"}, "mymessage", {html: "şurup"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 1, q: "turnuva" ,as: [["f","H"], ["j","E"]] }],
         ["practice","mycross", {html: "+"}, "mymessage", {html: "kılıf"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 0, q: "übtey" ,as: [["f","H"], ["j","E"]] }],
         ["practice","mycross", {html: "+"}, "mymessage", {html: "burç"}, "myblank", {html: ""}, "myquestiontx", {hasCorrect: 1, q: "fıskiye" ,as: [["f","H"], ["j","E"]] }],
@@ -198,10 +205,7 @@ var items = [
                 ["p", "Deney esnasında vereceğiniz cevapları olabildiğince hızlı ve doğru vermeye çalışın. Deney boyunca deneye odaklanmanız gerekmektedir. Alıştırmaların aksine, deneyin kendisinde cevabınızın doğruluğu ile ilgili geridönüt verilmeyecektir. Fakat geç cevap vermeniz taktirde geridönüt verilecektir."],
                 ["p", "Katılımınız için şimdiden çok teşekkürler!"],
             ]
-        }],
-        
-        
-        [["condition_related", 1], "mycross", {html: "+"}, "mymessage", {html: "monitör"}, "myblank", {html: ""}, "myquestiontx", {q: "bilgisayar" ,as: [["f","H"], ["j","E"]] }],
+        }],[["condition_related", 1], "mycross", {html: "+"}, "mymessage", {html: "monitör"}, "myblank", {html: ""}, "myquestiontx", {q: "bilgisayar" ,as: [["f","H"], ["j","E"]] }],
 [["condition_unrelated", 1], "mycross", {html: "+"}, "mymessage", {html: "fındık"}, "myblank", {html: ""}, "myquestiontx", {q: "bilgisayar" ,as: [["f","H"], ["j","E"]] }],
 [["condition_related", 2], "mycross", {html: "+"}, "mymessage", {html: "ahize"}, "myblank", {html: ""}, "myquestiontx", {q: "telefon" ,as: [["f","H"], ["j","E"]] }],
 [["condition_unrelated", 2], "mycross", {html: "+"}, "mymessage", {html: "kapı"}, "myblank", {html: ""}, "myquestiontx", {q: "telefon" ,as: [["f","H"], ["j","E"]] }],
