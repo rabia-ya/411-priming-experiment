@@ -22,7 +22,7 @@ var defaults = [
         showProgressBar: false,
         transfer: 1000,
         normalMessage: "Correct! Wonderful!",
-        errorMessage: "Opps! Incorrect, please try again."
+        errorMessage: "Opps! Incorrect, please try again.",
         slowMessage: "Too Slow!"
     },
 
